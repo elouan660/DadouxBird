@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://c72vgvpg544jr"]
+
+[ext_resource type="Texture2D" uid="uid://dcvb1xtbex5u3" path="res://Mobile - Flappy Bird - Version 12 Sprites.png" id="1_0kpwr"]
+[ext_resource type="Script" path="res://dadoux.gd" id="1_w7vbm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1mi20"]
+resource_name = "flappycoll"
+radius = 9.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbcey"]
+atlas = ExtResource("1_0kpwr")
+region = Rect2(0, 483, 28, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wndch"]
+atlas = ExtResource("1_0kpwr")
+region = Rect2(28, 483, 28, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eipy"]
+atlas = ExtResource("1_0kpwr")
+region = Rect2(56, 483, 28, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vj3ja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbcey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wndch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eipy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dadoux" type="Area2D"]
+script = ExtResource("1_w7vbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(1, 0.5)
+shape = SubResource("CapsuleShape2D_1mi20")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -4)
+sprite_frames = SubResource("SpriteFrames_vj3ja")
+frame = 2
+frame_progress = 0.340061
