@@ -8,29 +8,29 @@ resource_name = "flappycoll"
 radius = 9.0
 height = 24.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wbcey"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm4ww"]
 atlas = ExtResource("1_0kpwr")
-region = Rect2(0, 483, 28, 21)
+region = Rect2(0, 486, 28, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wndch"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0telk"]
 atlas = ExtResource("1_0kpwr")
-region = Rect2(28, 483, 28, 21)
+region = Rect2(28, 486, 28, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5eipy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_if4y3"]
 atlas = ExtResource("1_0kpwr")
-region = Rect2(56, 483, 28, 21)
+region = Rect2(56, 486, 28, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vj3ja"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wbcey")
+"texture": SubResource("AtlasTexture_sm4ww")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wndch")
+"texture": SubResource("AtlasTexture_0telk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5eipy")
+"texture": SubResource("AtlasTexture_if4y3")
 }],
 "loop": true,
 "name": &"default",

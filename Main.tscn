@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3slxf030ukxs"]
+
+[ext_resource type="PackedScene" uid="uid://c72vgvpg544jr" path="res://dadoux.tscn" id="1_8fwwu"]
+[ext_resource type="Texture2D" uid="uid://m848dojoufdp" path="res://background.png" id="2_wnni6"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Dadoux" parent="." instance=ExtResource("1_8fwwu")]
+position = Vector2(157, 396)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_repeat = 2
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(3.35, 3.35)
+texture = ExtResource("2_wnni6")
+centered = false
